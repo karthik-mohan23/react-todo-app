@@ -3,7 +3,7 @@ import ShowTasks from "./components/ShowTasks";
 import AddTask from "./components/AddTask";
 
 function App() {
-  const [tasks, setTasks] = useState(["Task 1", "Task 2"]);
+  const [tasks, setTasks] = useState([]);
 
   return (
     <div className="mt-28">

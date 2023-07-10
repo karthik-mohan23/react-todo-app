@@ -14,6 +14,14 @@ const AddTask = ({ tasks, setTasks }) => {
 
   return (
     <div className="w-[90%] max-w-lg mx-auto mb-10">
+      <div className="flex justify-between items-center mb-8">
+        <p className="text-2xl font-semibold">{tasks.length}</p>
+        <button
+          onClick={() => setTasks([])}
+          className="bg-red-500 text-white py-1 px-3 rounded-md">
+          Clear all
+        </button>
+      </div>
       <form onSubmit={handleAddTask} className="flex items-center gap-4 w-full">
         <input
           type="text"
