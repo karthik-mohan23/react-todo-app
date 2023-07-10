@@ -7,9 +7,9 @@ function App() {
 
   return (
     <div className="mt-28">
-      <AddTask />
-      {tasks.map((task) => (
-        <ShowTasks task={task} />
+      <AddTask setTasks={setTasks} tasks={tasks} />
+      {tasks.map((task, index) => (
+        <ShowTasks task={task} key={index} />
       ))}
     </div>
   );
