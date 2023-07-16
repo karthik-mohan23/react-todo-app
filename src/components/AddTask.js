@@ -8,7 +8,10 @@ const AddTask = ({ tasks, setTasks }) => {
     if (inputValue.length === 0) {
       return;
     }
-    setTasks([...tasks, inputValue]);
+    setTasks([
+      ...tasks,
+      { id: Date.now(), task: inputValue, completed: false },
+    ]);
     setInputValue("");
   };
 
