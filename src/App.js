@@ -3,10 +3,7 @@ import ShowTasks from "./components/ShowTasks";
 import AddTask from "./components/AddTask";
 
 function App() {
-  const [tasks, setTasks] = useState([
-    { id: 1, task: "Todo", checked: false },
-    { id: 2, task: "Done", checked: false },
-  ]);
+  const [tasks, setTasks] = useState([]);
 
   const deleteTask = (id) => {
     setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));

@@ -2,6 +2,8 @@ import { useState } from "react";
 
 const AddTask = ({ tasks, setTasks }) => {
   const [inputValue, setInputValue] = useState("");
+  // we only need new date when we are adding a new task.
+  const date = new Date();
 
   const handleAddTask = (e) => {
     e.preventDefault();
@@ -10,7 +12,7 @@ const AddTask = ({ tasks, setTasks }) => {
     }
     setTasks([
       ...tasks,
-      { id: Date.now(), task: inputValue, completed: false },
+      { id: date.getTime(), task: inputValue, completed: false, date },
     ]);
     setInputValue("");
   };
